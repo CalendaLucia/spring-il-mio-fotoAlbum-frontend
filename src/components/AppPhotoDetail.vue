@@ -35,18 +35,33 @@ export default {
 
 <template>
     <div class="container">
-    <h2>Photo Details</h2>
-    <div v-if="photo">
-      <h3>{{ photo.title }}</h3>
-      <p>{{ photo.description }}</p>
-      <div class="card" style="width: 18rem;">
-        <img :src="imageURL" alt="Photo" />
-      </div>
-    
-    </div>
-    <div v-else>
-      <p>Loading...</p>
-    </div>
-    <router-link to="/" class="btn btn-primary">Back to Photos</router-link>
+        <div class="row ">
+            <div class="col-3" v-if="photo">
+                <div class="profile-card">
+                    <div class="card-image">
+                        <img :src="imageURL" alt="Photo" />
+                    </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="card  bg-light ">
+                    <h5 class="card-title">{{photo.title }}</h5>
+                    <p class="card-text">{{photo.description}}</p>      
+                  </div>
+                </div>
+            </div>
+                 
+            <div v-else>
+            <p>Loading...</p>
+            </div>
+        </div>
+  
+   
+
+    <router-link to="/" class="btn btn-darks mt-4">Back to Photos</router-link>
   </div>
 </template>
+
+<style lang="scss" scoped>
+
+</style>

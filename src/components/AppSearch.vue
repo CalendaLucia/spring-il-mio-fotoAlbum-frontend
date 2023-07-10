@@ -36,8 +36,8 @@ export default {
             aria-label="Search"
             v-model="searchKeyword"
           />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-          <button class="btn btn-outline-primary" type="button" @click="clearSearch">Clear</button>
+          <button class="btn btn-outline-warning m-1" type="submit">Search</button>
+          <button class="btn btn-outline-dark m-1" type="button" @click="clearSearch">Clear</button>
         </form>
       </div>
     </div>

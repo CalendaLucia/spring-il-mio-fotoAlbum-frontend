@@ -91,13 +91,12 @@ export default {
                 <div class="card-image">
                     <img :src="photo.imageURL" class="img img-responsive"/>
                 </div>
-                <div class="card-body">
+              </div>
+              <div class="card  bg-light ">
                     <h5 class="card-title">{{photo.title }}</h5>
                     <p class="card-text">{{photo.description}}</p>
-                 
-                    <router-link :to="{ name: 'details', params: { id: photo.id}}" class="btn btn-primary">View Details</router-link>
+                    <router-link :to="{ name: 'details', params: { id: photo.id}}" class="btn btn-dark">View Details</router-link>
                 </div>
-              </div>
             </div>
         </div>
     </div>
@@ -106,7 +105,7 @@ export default {
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .profile-card {
         max-width: 300px;
@@ -120,12 +119,17 @@ export default {
         border-radius: 10px;
         height: 400px;
 
-            .profile-card img {
-            transition: all linear 0.25s;
-            height: 400px;
-            width: 100%;
-            object-fit: cover;
-        }
+        img {
+        transition: all linear 0.25s;
+        height: 400px;
+         width: 100%;
+        object-fit: cover;
+    }
+
+    &:hover img {
+        filter: grayscale(100%);
+    }
+
     }
 
  
