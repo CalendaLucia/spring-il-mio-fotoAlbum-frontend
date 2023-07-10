@@ -25,11 +25,9 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <router-link to="/" class="nav-link">Home</router-link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
+          
               <li class="nav-item">
                 <router-link to="/contact" class="nav-link">Contact</router-link>
               </li>

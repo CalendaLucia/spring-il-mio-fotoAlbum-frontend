@@ -87,8 +87,10 @@ export default {
     <div class="container-fluid mt-5 p-2 text-center">
         <div class="row p-5">
             <div class="col-3" v-for="photo in photos" :key="photo.id">
-              <div class="card  h-100 w-75">
-                <img :src="photo.imageURL" class="w-100 h-75 img-fluid" alt="..." />
+              <div class="profile-card">
+                <div class="card-image">
+                    <img :src="photo.imageURL" class="img img-responsive"/>
+                </div>
                 <div class="card-body">
                     <h5 class="card-title">{{photo.title }}</h5>
                     <p class="card-text">{{photo.description}}</p>
@@ -104,6 +106,29 @@ export default {
 
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+
+.profile-card {
+        max-width: 300px;
+        background-color: #FFF;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+        border-radius: 10px;
+        height: 400px;
+
+            .profile-card img {
+            transition: all linear 0.25s;
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+ 
+
 
 </style>
