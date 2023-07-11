@@ -25,6 +25,9 @@ export default {
         this.fetchPhotos();
     },
     methods: {
+        reloadPage() {
+      location.reload();
+    },
         async fetchPhotos() {
             try {
                 //aggiungo i parametri
@@ -63,7 +66,8 @@ export default {
         searchPhotos(keyword) {
             this.searchKeyword = keyword;
             this.fetchPhotos();
-        }
+        },
+        
      
     },
     computed: {
@@ -84,6 +88,13 @@ export default {
 
 <template>
     <AppSearch @searchPhotos="searchPhotos"/>
+
+    <div class="container text-center">
+        <button class="btn btn-dark" @click="reloadPage">Reload</button>
+    </div>
+
+   
+    
     <div class="container-fluid mt-5 p-2 text-center">
         <div class="row p-5">
             <div class="col-3" v-for="photo in photos" :key="photo.id">

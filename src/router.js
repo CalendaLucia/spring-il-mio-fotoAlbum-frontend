@@ -13,6 +13,8 @@ const router = createRouter({
             name: 'home',
             component: AppGetPhoto,
         },
+ 
+      
         {
             path: '/photos/:id',
             name: 'details',
